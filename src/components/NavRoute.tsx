@@ -11,6 +11,7 @@ import ListScreen from '../screens/ListScreen';
 import TaskContext from '../contexts/task-store';
 import useLocalStorage from '../hooks/use-local-storage';
 import { Task } from '../types';
+import applyMediaQuery from '../styles/mediaQuery';
 
 const StyledRoot = styled.div`
   background-color: ${(props) => props.theme.palette.background};
@@ -32,6 +33,10 @@ const Nav = styled.nav`
   margin-bottom: 3.5rem;
   font-weight: ${(props) => props.theme.font.weight.bold};
   font-size: ${(props) => props.theme.font.size.large};
+  ${applyMediaQuery("mobile")} {
+   width: 30rem;
+
+  }
 `;
 
 const TabButton = styled(NavLink)`

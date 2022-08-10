@@ -47,7 +47,7 @@ const FocusScreen: React.FC<Props> = () => {
   return task ? (
     <StyledRoot>
       <Task>{task.label}</Task>
-      <Button onClick={handleMarkComplete}>mark completed</Button>
+      <Button onClick={handleMarkComplete}>Mark Completed</Button>
       <Spacer height={45} />
       <TextButton onClick={shuffleFocusedTask}>Skip Task</TextButton>
     </StyledRoot>
